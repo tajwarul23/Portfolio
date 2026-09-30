@@ -1,36 +1,40 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# Tajwarul Chowdhury — Portfolio
 
-## Getting Started
-
-First, run the development server:
+Next.js (App Router, JavaScript) · Tailwind CSS v4 · shadcn/ui (Base UI).
 
 ```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+npm install
+npm run dev     # http://localhost:3000
+npm run build   # production build
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## Editing content
 
-You can start editing the page by modifying `app/page.js`. The page auto-updates as you edit the file.
+Almost everything lives in `content/`:
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+| File | What it holds |
+| --- | --- |
+| `content/site.js` | Name, email, social links, photo, resume path |
+| `content/projects.js` | Project cards, engineering areas, tech stack, education |
+| `content/case-studies/*.js` | Case study pages (`/projects/<slug>`) |
+| `lib/stats.js` | Fallback numbers for the Problem Solving section |
 
-## Learn More
+- **Resume:** put the PDF at `public/resume.pdf` and set `resume: "/resume.pdf"` in `content/site.js`. The "View Resume" buttons appear automatically.
+- **Project links:** set `demo` / `repo` in `content/projects.js`. Buttons appear when a URL is set.
+- **New case study:** copy `content/case-studies/scam-scanner.js`, register it in `content/case-studies/index.js`, and set `caseStudy: "<slug>"` on the project.
+- Case study fields left as `null` or `[]` (timeline, status, challenge solutions, metrics, learnings) are hidden on the page until you fill them in.
 
-To learn more about Next.js, take a look at the following resources:
+## Live stats
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+The Problem Solving section fetches Codeforces (max rating, contests), LeetCode (solved by difficulty) and GitHub (public repos) at build time and re-fetches at most once a day. If a source is down, it falls back to the values in `lib/stats.js`. The Codeforces solved count is set by hand.
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+## Environment variables
 
-## Deploy on Vercel
+See `.env.example`. All are optional.
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+## Deploying
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+Push to GitHub, import the repo on [vercel.com/new](https://vercel.com/new), add the env vars, and deploy. Add a custom domain under Project → Settings → Domains.
+
+The original design mockups are in `design/`.
+"# Portfolio" 
