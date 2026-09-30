@@ -22,7 +22,7 @@ export const site = {
   email: "tajwarulchowdhury@gmail.com",
   links: {
     github: "https://github.com/tajwarul23",
-    linkedin: "https://www.linkedin.com/in/tajwarul-chowdhury-7288381a9/",
+    linkedin: "https://www.linkedin.com/in/tajwarul-hasan-chowdhury",
     codeforces: "https://codeforces.com/profile/tajwarul",
     leetcode: "https://leetcode.com/u/tajwarulchowdhury/",
   },
