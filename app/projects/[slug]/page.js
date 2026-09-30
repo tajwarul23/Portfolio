@@ -129,10 +129,16 @@ export default async function CaseStudyPage({ params }) {
                 <span className="text-[15px]">{v}</span>
               </div>
             ))}
-            {(cs.demo || cs.repo) && (
-              <div className="flex min-w-[200px] flex-1 items-center gap-2 bg-ink px-5 py-[18px]">
+            {(cs.demo || cs.repo || cs.demos || cs.repos) && (
+              <div className="flex min-w-[200px] flex-1 flex-wrap items-center gap-2 bg-ink px-5 py-[18px]">
                 {cs.demo && <a className={buttonVariants({ size: "sm" })} href={cs.demo} target="_blank" rel="noreferrer">Live Demo ↗</a>}
+                {cs.demos?.map(([label, url]) => (
+                  <a key={url} className={buttonVariants({ size: "sm" })} href={url} target="_blank" rel="noreferrer">{label} ↗</a>
+                ))}
                 {cs.repo && <a className={buttonVariants({ variant: "outline", size: "sm" })} href={cs.repo} target="_blank" rel="noreferrer">GitHub</a>}
+                {cs.repos?.map(([label, url]) => (
+                  <a key={url} className={buttonVariants({ variant: "outline", size: "sm" })} href={url} target="_blank" rel="noreferrer">{label} repo</a>
+                ))}
               </div>
             )}
           </div>

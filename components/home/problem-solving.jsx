@@ -2,31 +2,7 @@ import { site } from "@/content/site";
 import { practiceAreas } from "@/content/projects";
 import { buttonVariants } from "@/components/ui/button";
 import { SectionHeading } from "@/components/section-heading";
-
-const fmt = (n) => (typeof n === "number" ? n.toLocaleString("en-US") : "—");
-
-function StatCard({ label, primary, rows, href }) {
-  return (
-    <a
-      href={href}
-      target="_blank"
-      rel="noreferrer"
-      className="flex flex-col gap-3.5 bg-ink p-[26px] text-fg hover:bg-surface hover:text-fg"
-    >
-      <span className="font-mono text-xs text-dim">{label}</span>
-      <div className="flex flex-col gap-0.5">
-        <span className="text-[34px] font-semibold tracking-[-0.02em]">{primary.value}</span>
-        <span className="text-[13px] text-muted-2">{primary.label}</span>
-      </div>
-      {rows.map((r) => (
-        <div key={r.label} className="flex flex-col gap-0.5">
-          <span className="text-xl font-semibold">{r.value}</span>
-          <span className="text-[13px] text-muted-2">{r.label}</span>
-        </div>
-      ))}
-    </a>
-  );
-}
+import { StatCard, StatGrid, fmt } from "@/components/stat-card";
 
 export function ProblemSolving({ stats }) {
   const { codeforces: cf, leetcode: lc, github: gh } = stats;
@@ -76,19 +52,19 @@ export function ProblemSolving({ stats }) {
           </div>
         </SectionHeading>
         <div className="flex flex-col gap-7">
-          <div className="grid gap-px overflow-hidden rounded-2xl border border-line-2 bg-line-2 sm:grid-cols-3">
+          <StatGrid className="sm:grid-cols-3">
             {cards.map((c) => (
-              <StatCard key={c.label} {...c} />
+              <StatCard key={c.label} {...c} animate />
             ))}
-          </div>
-          <div className="flex flex-col gap-3">
+          </StatGrid>
+          {/* <div className="flex flex-col gap-3">
             <span className="mono-label">Areas I practice</span>
             <ul className="flex flex-wrap gap-2">
               {practiceAreas.map((a) => (
                 <li key={a} className="tag">{a}</li>
               ))}
             </ul>
-          </div>
+          </div> */}
         </div>
       </div>
     </section>

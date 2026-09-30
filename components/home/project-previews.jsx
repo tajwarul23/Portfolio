@@ -55,7 +55,7 @@ export function ScamScannerPreview() {
   );
 }
 
-export function PrepLabPreview() {
+export function HireFlowPreview() {
   const rows = [
     ["Candidate A", "strong", "text-ok", "Report ready", true],
     ["Candidate B", "partial", "text-warn", "Report ready", true],
@@ -64,7 +64,7 @@ export function PrepLabPreview() {
   const cols = "grid grid-cols-[minmax(0,1.4fr)_70px_minmax(0,1.3fr)_56px] gap-2.5 sm:grid-cols-[minmax(0,1.4fr)_90px_110px_80px]";
   return (
     <Frame
-      path="preplab / recruiter / jobs / frontend-intern"
+      path="hireflow / recruiter / jobs / frontend-intern"
       right={<span className="shrink-0 font-mono text-[11px] text-muted-1">24 applicants</span>}
     >
       <div className="flex flex-col gap-2.5 p-4">
@@ -95,7 +95,46 @@ export function PrepLabPreview() {
   );
 }
 
+export function SecLibraryPreview() {
+  const results = [
+    ["Introduction to Algorithms", "Graphs · shortest paths", "2 available", "text-ok"],
+    ["Algorithm Design", "Network flow · greedy", "Waitlist · 3", "text-warn"],
+    ["Discrete Mathematics", "Graph theory basics", "1 available", "text-ok"],
+  ];
+  return (
+    <Frame
+      path="sec-library / student / smart-search"
+      right={<span className="shrink-0 font-mono text-[11px] text-muted-1">Fine due ৳40 · Pay</span>}
+    >
+      <div className="flex flex-col gap-2.5 p-4">
+        <div className="self-end rounded-lg bg-violet/15 px-3 py-2 text-xs">
+          Any books that explain graph algorithms?
+        </div>
+        <div className="flex flex-col gap-2 rounded-[10px] border border-[#2a2a33] p-3.5">
+          <span className="text-xs leading-relaxed text-muted-1">
+            3 books in the catalog cover graph algorithms, most relevant first:
+          </span>
+          {results.map(([title, topics, status, color]) => (
+            <div key={title} className="flex items-center justify-between gap-3 rounded-lg bg-chip p-2.5 text-xs">
+              <div className="flex min-w-0 flex-col gap-0.5">
+                <span className="truncate">{title}</span>
+                <span className="truncate text-[11px] text-dim">{topics}</span>
+              </div>
+              <span className={`shrink-0 font-mono text-[10px] ${color}`}>{status}</span>
+            </div>
+          ))}
+        </div>
+        <div className="flex gap-1.5">
+          <span className="tag h-[22px] text-[10px]">Reserve</span>
+          <span className="tag h-[22px] text-[10px]">Join waitlist</span>
+        </div>
+      </div>
+    </Frame>
+  );
+}
+
 export const previews = {
   "scam-scanner": ScamScannerPreview,
-  preplab: PrepLabPreview,
+  hireflow: HireFlowPreview,
+  "sec-library": SecLibraryPreview,
 };

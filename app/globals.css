@@ -123,6 +123,26 @@
     transition-duration: 0.01ms !important;
     animation-duration: 0.01ms !important;
   }
+  /* A 0.01ms blink would flicker, so keep the caret solid instead. */
+  .typing-caret {
+    animation: none !important;
+  }
+}
+
+/* Blinking cursor after the hero's typed phrase. */
+.typing-caret {
+  display: inline-block;
+  width: 0.06em;
+  height: 0.9em;
+  margin-left: 0.08em;
+  vertical-align: -0.08em;
+  background: var(--color-violet);
+  animation: caret-blink 1s step-end infinite;
+}
+@keyframes caret-blink {
+  50% {
+    opacity: 0;
+  }
 }
 
 @layer components {

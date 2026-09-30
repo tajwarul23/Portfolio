@@ -7,11 +7,11 @@ export const scamScanner = {
   name: "Scam Scanner",
   intro:
     "An AI-powered platform that reads scam evidence — screenshots, chats and documents — as one case, and explains what's suspicious and what to verify next.",
-  role: "Solo — design, backend, AI",
-  timeline: null, // TODO: e.g. "Jan 2026 — Apr 2026"
-  status: null, // TODO: "In progress" or "Live"
-  demo: null, // TODO: live demo URL
-  repo: null, // TODO: GitHub repo URL
+  
+  
+  
+  demo: "https://scam-scanner-one.vercel.app/", 
+  repo: "https://github.com/tajwarul23/ScamScanner", 
   heroImage: {
     src: "/images/scam-scanner.png",
     alt: "Scam Scanner landing page with a sample high-risk case summary and what to verify next",
@@ -24,7 +24,7 @@ export const scamScanner = {
   },
   solution: {
     title: "Treat every upload as evidence in one case.",
-    body: "Users open a case and add screenshots, documents and pasted messages. The system extracts names, companies, amounts, dates and claims from all of them together, checks links, flags contradictions, and produces a plain-language summary with a risk level, the evidence behind it, and the next things to verify. Scam patterns — never names or numbers — feed a public feed.",
+    body: "Users open a case and add screenshots, documents and pasted messages. The system extracts names, companies, amounts, dates, URLs, and claims from all of them together, checks links, flags contradictions, and produces a plain-language summary with a risk level, the evidence behind it, and the next things to verify.",
   },
   architecture: {
     title: "Uploads return fast; analysis happens in workers.",
@@ -55,7 +55,7 @@ export const scamScanner = {
     ["Contradiction detection", "Mismatched amounts, names and domains across items."],
     ["Risk level with evidence", "Every signal links back to the item it came from."],
     ["Next verification steps", "Concrete things to check before paying or replying."],
-    ["Shareable report & public feed", "Export a report; share only the pattern publicly."],
+    ["Shareable report", "Export the full analysis as a report to keep or send to someone."],
   ],
   challenges: [
     {
@@ -84,8 +84,8 @@ export const scamScanner = {
       "finalizeCase() grows in place as new inputs arrive (signals, RAG matches) instead of being replaced each phase.",
     ],
     [
-      "Pattern-only public feed",
-      "No names, companies or numbers are ever published, so no manual review step is needed.",
+      "Rules alongside the model",
+      "A deterministic signal engine and URL reputation checks run next to the LLM, so the risk level never rests on the model's judgement alone.",
     ],
     [
       "Free-tier model budget",
@@ -104,6 +104,8 @@ export const scamScanner = {
     "Better Auth",
     "Redis",
     "BullMQ",
+    "ZOD",
+    "React-Hook-Form",
     "Gemini",
     "Groq",
     "Cloudinary",

@@ -8,10 +8,17 @@ export const site = {
   role: "Software Engineer",
   location: "Sylhet, BD",
   availability: "Open to SWE roles",
+  // Typed in the hero after "I build " — the first one is what shows before the animation starts.
+  heroPhrases: [
+    "full-stack systems.",
+    "AI-powered software.",
+    "reliable backend APIs.",
+    "LLM pipelines that hold up.",
+  ],
   description:
     "Software engineer building full-stack systems and AI-powered software — APIs, databases, background jobs and LLM pipelines.",
   photo: "/images/tajwarul.jpeg",
-  resume: null,
+  resume: "/resume.pdf",
   email: "tajwarulchowdhury@gmail.com",
   links: {
     github: "https://github.com/tajwarul23",

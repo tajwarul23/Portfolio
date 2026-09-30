@@ -37,10 +37,10 @@ export default async function Home() {
       <main id="main">
         <div className="mx-auto max-w-[1160px] px-4 sm:px-10">
           <Hero />
-          <About />
+          <About stats={stats} />
+          <Stack />
           <Projects />
           <Engineering />
-          <Stack />
         </div>
         <ProblemSolving stats={stats} />
         <div className="mx-auto max-w-[1160px] px-4 sm:px-10">

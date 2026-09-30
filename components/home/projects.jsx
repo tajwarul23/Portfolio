@@ -1,3 +1,4 @@
+import Image from "next/image";
 import Link from "next/link";
 import { projects } from "@/content/projects";
 import { site } from "@/content/site";
@@ -7,9 +8,27 @@ import { previews } from "@/components/home/project-previews";
 function ProjectCard({ project, index }) {
   const Preview = previews[project.preview];
   return (
-    <article className="group grid overflow-hidden rounded-[22px] border border-line bg-surface transition-colors duration-200 hover:border-line-strong lg:grid-cols-[minmax(0,1.12fr)_minmax(0,1fr)]">
-      <div className="flex items-end overflow-hidden border-b border-line bg-surface-3 pt-8 pl-6 sm:pt-10 sm:pl-10 lg:border-r lg:border-b-0" aria-hidden>
-        {Preview && <Preview />}
+    <article className="group flex flex-col overflow-hidden rounded-[22px] border border-line bg-surface transition-colors duration-200 hover:border-line-strong">
+      {/* Screenshot on top, full width; the mockup fallback keeps its bottom-right anchored frame. */}
+      <div
+        className={`flex items-end overflow-hidden border-b border-line bg-surface-3 pt-8 sm:pt-10 ${project.image ? "px-6 sm:px-10" : "pl-6 sm:pl-10"}`}
+        aria-hidden
+      >
+        {project.image ? (
+          <div className="shot w-full overflow-hidden rounded-t-xl border-x border-t border-[#2a2a33] bg-[#0f0f13] transition-transform duration-300 ease-out group-hover:-translate-y-1">
+            {/* Natural aspect ratio, so the whole screenshot shows with nothing cropped. */}
+            <Image
+              src={project.image.src}
+              alt=""
+              width={project.image.width}
+              height={project.image.height}
+              sizes="(min-width: 1160px) 1000px, 100vw"
+              className="block h-auto w-full"
+            />
+          </div>
+        ) : (
+          Preview && <Preview />
+        )}
       </div>
       <div className="flex flex-col gap-[22px] p-6 sm:p-10">
         <div className="flex gap-3.5 font-mono text-xs text-dim">
@@ -33,7 +52,7 @@ function ProjectCard({ project, index }) {
             <li key={t} className="tag">{t}</li>
           ))}
         </ul>
-        {(project.demo || project.repo || project.caseStudy) && (
+        {(project.demo || project.repo || project.repos || project.caseStudy) && (
           <div className="mt-auto flex flex-wrap gap-2.5">
             {project.demo && (
               <a className={buttonVariants({ variant: "outline", size: "sm" })} href={project.demo} target="_blank" rel="noreferrer">
@@ -45,6 +64,11 @@ function ProjectCard({ project, index }) {
                 GitHub
               </a>
             )}
+            {project.repos?.map(([label, url]) => (
+              <a key={url} className={buttonVariants({ variant: "outline", size: "sm" })} href={url} target="_blank" rel="noreferrer">
+                {label}
+              </a>
+            ))}
             {project.caseStudy && (
               <Link className={buttonVariants({ size: "sm" })} href={`/projects/${project.caseStudy}`}>
                 Case Study →

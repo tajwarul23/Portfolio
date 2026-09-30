@@ -1,8 +1,10 @@
 import Image from "next/image";
-import { BriefcaseIcon, CodeIcon, MailIcon } from "lucide-react";
+import { MailIcon } from "lucide-react";
+import { CodeforcesIcon, GitHubIcon, LinkedInIcon } from "@/components/brand-icons";
 import { site } from "@/content/site";
 import { projects } from "@/content/projects";
 import { buttonVariants } from "@/components/ui/button";
+import { Typewriter } from "@/components/typewriter";
 
 export function Hero() {
   return (
@@ -16,13 +18,13 @@ export function Hero() {
           <h1 className="text-[40px] leading-[1.06] font-semibold tracking-[-0.035em] sm:text-[52px] lg:text-[60px]">
             Hi, I&apos;m {site.shortName}.
             <br />
-            <span className="text-muted-2">I build full-stack systems and AI-powered software.</span>
+            {/* Screen readers and search engines get the full sentence; the typed version is visual only. */}
+            <span className="sr-only">I build full-stack systems and AI-powered software.</span>
+            <span className="text-muted-2" aria-hidden>
+              I build <Typewriter phrases={site.heroPhrases} />
+            </span>
           </h1>
-          <p className="max-w-[540px] text-[17px] leading-[1.65] text-fg-3 sm:text-lg">
-            Software engineering graduate from Sylhet Engineering College. I design and build complete
-            applications — the APIs, databases, background jobs and LLM pipelines behind them — and I care
-            about what happens when things fail.
-          </p>
+        
           <div className="flex flex-wrap gap-3">
             <a href="#projects" className={buttonVariants()}>View Projects</a>
             {site.resume ? (
@@ -35,14 +37,15 @@ export function Hero() {
           </div>
           <div className="flex flex-wrap gap-x-6 pt-1">
             <a className="inline-flex h-11 items-center gap-2 text-sm text-muted-1 hover:text-fg" href={site.links.github} target="_blank" rel="noreferrer">
-              <CodeIcon className="size-[17px]" />GitHub
+              <GitHubIcon className="size-[17px]" />GitHub
             </a>
             <a className="inline-flex h-11 items-center gap-2 text-sm text-muted-1 hover:text-fg" href={site.links.linkedin} target="_blank" rel="noreferrer">
-              <BriefcaseIcon className="size-[17px]" />LinkedIn
+              <LinkedInIcon className="size-[17px]" />LinkedIn
             </a>
-            <a className="inline-flex h-11 items-center gap-2 text-sm text-muted-1 hover:text-fg" href={`mailto:${site.email}`}>
-              <MailIcon className="size-[17px]" />Email
+            <a className="inline-flex h-11 items-center gap-2 text-sm text-muted-1 hover:text-fg" href={site.links.codeforces} target="_blank" rel="noreferrer">
+              <CodeforcesIcon className="size-[17px]" />Codeforces
             </a>
+         
           </div>
         </div>
 
@@ -68,7 +71,7 @@ export function Hero() {
           </div>
           <div className="absolute bottom-10 -left-2 flex h-[30px] items-center gap-2 rounded-lg border border-line-2 bg-ink px-3 font-mono text-[11px] text-fg-3 sm:left-4">
             <span className="size-1.5 rounded-full bg-ok" />
-            {site.availability} · {site.location}
+            {site.availability} 
           </div>
         </div>
       </section>

@@ -1,7 +1,9 @@
 import { scamScanner } from "./scam-scanner";
+import { hireflow } from "./hireflow";
+import { secLibrary } from "./sec-library";
 
 // Order here is the "Next case study" order.
-export const caseStudies = [scamScanner];
+export const caseStudies = [scamScanner, hireflow, secLibrary];
 
 export function getCaseStudy(slug) {
   return caseStudies.find((c) => c.slug === slug) ?? null;
