@@ -1,0 +1,204 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Scam Scanner — Case Study</title>
+<script src="./vendor/react.js"></script>
+<script src="./vendor/react-dom.js"></script>
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Instrument+Sans:wght@400;500;600;700&amp;family=JetBrains+Mono:wght@400;500&amp;display=swap">
+<style>
+body{margin:0;background:#0d0d10}
+.mono{font-family:'JetBrains Mono',ui-monospace,monospace}
+.lbl{font-family:'JetBrains Mono',monospace;font-size:12px;letter-spacing:.08em;text-transform:uppercase;color:#8b7cf6}
+a{color:#ecebf0;text-decoration:none}
+a:hover{color:#b3a8ff}
+.nl{font-size:14px;color:#9d9ca8;padding:10px 0}
+.nl:hover{color:#ecebf0}
+.btn{display:inline-flex;align-items:center;gap:8px;height:40px;padding:0 14px;border-radius:10px;font-size:13px;font-weight:600;border:1px solid #2c2c35;color:#ecebf0}
+.btn:hover{border-color:#4a4a57;background:#16161b;color:#ecebf0}
+.btn-p{background:#8b7cf6;border-color:#8b7cf6;color:#0d0d10}
+.btn-p:hover{background:#9d90f8;color:#0d0d10}
+.toc{display:flex;align-items:center;gap:12px;padding:8px 0;font-size:14px;color:#8c8b97}
+.toc:hover{color:#ecebf0}
+.toc.on{color:#ecebf0}
+.h2{margin:0;font-size:30px;line-height:1.15;font-weight:600;letter-spacing:-0.02em}
+.p{margin:0;font-size:17px;line-height:1.75;color:#b9b8c3}
+.box{padding:14px 16px;border-radius:12px;border:1px solid #2a2a33;background:#141418;display:flex;flex-direction:column;gap:4px}
+.tag{display:inline-flex;align-items:center;height:26px;padding:0 9px;border-radius:6px;background:#1a1a20;border:1px solid #26262e;font-family:'JetBrains Mono',monospace;font-size:12px;color:#b9b8c3}
+</style>
+</helmet>
+<div style="width: 100%; min-height: 5400px; background: #0d0d10; color: #ecebf0; font-family: 'Instrument Sans', system-ui, sans-serif; -webkit-font-smoothing: antialiased">
+
+<header style="position: sticky; top: 0; z-index: 20; background: rgba(13,13,16,0.92); border-bottom: 1px solid #1f1f26">
+<div style="max-width: 1160px; margin: 0 auto; padding: 0 40px; height: 64px; display: flex; align-items: center; justify-content: space-between">
+<a href="P4-Home.dc.html" style="display: flex; align-items: center; gap: 10px; font-weight: 600; font-size: 15px"><span class="mono" style="display: inline-flex; align-items: center; justify-content: center; width: 28px; height: 28px; border-radius: 7px; background: #1c1930; color: #b3a8ff; font-size: 12px">TC</span>Tajwarul Chowdhury</a>
+<div style="display: flex; align-items: center; gap: 24px">
+<a class="nl" href="P4-Home.dc.html">← All projects</a>
+<a class="btn" href="#resume">View Resume</a>
+</div>
+</div>
+</header>
+
+<div style="max-width: 1160px; margin: 0 auto; padding: 0 40px">
+
+<!-- header -->
+<section style="padding: 88px 0 56px; display: flex; flex-direction: column; gap: 26px">
+<div class="mono" style="font-size: 13px; color: #7c7b87"><a href="P4-Home.dc.html" style="color: #7c7b87">Projects</a> / <span style="color: #b9b8c3">Scam Scanner</span></div>
+<div class="lbl">Case Study · 01</div>
+<h1 style="margin: 0; max-width: 900px; font-size: 60px; line-height: 1.05; font-weight: 600; letter-spacing: -0.035em">Scam Scanner</h1>
+<p style="margin: 0; max-width: 720px; font-size: 21px; line-height: 1.55; color: #b9b8c3">An AI-powered platform that reads scam evidence — screenshots, chats and documents — as one case, and explains what's suspicious and what to verify next.</p>
+<div style="display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 1px; background: #1f1f26; border: 1px solid #1f1f26; border-radius: 14px; overflow: hidden; margin-top: 12px">
+<div style="background: #0d0d10; padding: 18px 20px; display: flex; flex-direction: column; gap: 6px"><span class="mono" style="font-size: 11px; color: #7c7b87">ROLE</span><span style="font-size: 15px">Solo — design, backend, AI</span></div>
+<div style="background: #0d0d10; padding: 18px 20px; display: flex; flex-direction: column; gap: 6px"><span class="mono" style="font-size: 11px; color: #7c7b87">TIMELINE</span><span style="font-size: 15px">[Month YYYY — Month YYYY]</span></div>
+<div style="background: #0d0d10; padding: 18px 20px; display: flex; flex-direction: column; gap: 6px"><span class="mono" style="font-size: 11px; color: #7c7b87">STATUS</span><span style="font-size: 15px">[In progress / Live]</span></div>
+<div style="background: #0d0d10; padding: 18px 20px; display: flex; gap: 8px; align-items: center"><a class="btn btn-p" href="#demo">Live Demo ↗</a><a class="btn" href="#github">GitHub</a></div>
+</div>
+</section>
+
+<!-- hero visual -->
+<div style="height: 440px; border-radius: 20px; border: 1px solid #1f1f26; background: #16161b; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 10px; color: #7c7b87">
+<svg width="34" height="34" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="16" rx="2"></rect><path d="M3 9h18"></path></svg>
+<span style="font-size: 15px; font-weight: 600; color: #ecebf0">[Full product screenshot — case view]</span>
+<span class="mono" style="font-size: 11px">1160 × 440 · crop to the investigation summary</span>
+</div>
+
+<!-- body: sticky toc + content -->
+<div style="padding: 96px 0 120px; display: grid; grid-template-columns: 220px minmax(0, 1fr); gap: 80px; align-items: start">
+
+<nav aria-label="Case study sections" style="position: sticky; top: 104px; display: flex; flex-direction: column; border-left: 1px solid #1f1f26; padding-left: 20px">
+<span class="mono" style="font-size: 11px; color: #7c7b87; padding-bottom: 10px">ON THIS PAGE</span>
+<a class="toc on" href="#problem"><span class="mono" style="font-size: 11px; color: #8b7cf6">01</span>Problem</a>
+<a class="toc" href="#solution"><span class="mono" style="font-size: 11px">02</span>Solution</a>
+<a class="toc" href="#architecture"><span class="mono" style="font-size: 11px">03</span>Architecture</a>
+<a class="toc" href="#features"><span class="mono" style="font-size: 11px">04</span>Key Features</a>
+<a class="toc" href="#challenges"><span class="mono" style="font-size: 11px">05</span>Challenges</a>
+<a class="toc" href="#decisions"><span class="mono" style="font-size: 11px">06</span>Technical Decisions</a>
+<a class="toc" href="#learnings"><span class="mono" style="font-size: 11px">07</span>Results &amp; Learnings</a>
+<a class="toc" href="#stack"><span class="mono" style="font-size: 11px">08</span>Tech Stack</a>
+</nav>
+
+<div style="display: flex; flex-direction: column; gap: 96px; max-width: 780px">
+
+<section id="problem" style="display: flex; flex-direction: column; gap: 18px">
+<span class="lbl">01 · Problem</span>
+<h2 class="h2">Scam evidence is scattered and hard to read as a whole.</h2>
+<p class="p">A suspicious job offer arrives as a screenshot, a few chat messages and a payment link. Each piece looks harmless alone; the problem shows up in the contradictions between them. Most people don't know what to check, and pasting one screenshot into a chatbot misses the rest of the story.</p>
+</section>
+
+<section id="solution" style="display: flex; flex-direction: column; gap: 18px">
+<span class="lbl">02 · Solution</span>
+<h2 class="h2">Treat every upload as evidence in one case.</h2>
+<p class="p">Users open a case and add screenshots, documents and pasted messages. The system extracts names, companies, amounts, dates and claims from all of them together, checks links, flags contradictions, and produces a plain-language summary with a risk level, the evidence behind it, and the next things to verify. Scam patterns — never names or numbers — feed a public feed.</p>
+</section>
+
+<section id="architecture" style="display: flex; flex-direction: column; gap: 22px">
+<span class="lbl">03 · Architecture</span>
+<h2 class="h2">Uploads return fast; analysis happens in workers.</h2>
+<!-- diagram -->
+<div style="padding: 28px; border: 1px solid #1f1f26; border-radius: 18px; background: #111115; display: flex; flex-direction: column; gap: 18px">
+<div style="display: grid; grid-template-columns: minmax(0, 1fr) 28px minmax(0, 1fr) 28px minmax(0, 1fr); align-items: center">
+<div class="box"><span class="mono" style="font-size: 10px; color: #7c7b87">CLIENT</span><span style="font-size: 14px; font-weight: 600">Next.js app</span><span style="font-size: 12px; color: #8c8b97">Case UI, uploads</span></div>
+<span style="text-align: center; color: #6f8cf5">→</span>
+<div class="box" style="border-color: #3a3548"><span class="mono" style="font-size: 10px; color: #7c7b87">API</span><span style="font-size: 14px; font-weight: 600">Route handlers</span><span style="font-size: 12px; color: #8c8b97">Auth · validation · rate limit</span></div>
+<span style="text-align: center; color: #6f8cf5">→</span>
+<div class="box"><span class="mono" style="font-size: 10px; color: #7c7b87">QUEUE</span><span style="font-size: 14px; font-weight: 600">BullMQ on Redis</span><span style="font-size: 12px; color: #8c8b97">One job per evidence item</span></div>
+</div>
+<div style="display: flex; justify-content: flex-end; padding-right: 14%; color: #6f8cf5">↓</div>
+<div style="display: grid; grid-template-columns: minmax(0, 1fr) 28px minmax(0, 1fr) 28px minmax(0, 1fr); align-items: center">
+<div class="box"><span class="mono" style="font-size: 10px; color: #7c7b87">SYNTHESIS</span><span style="font-size: 14px; font-weight: 600">finalizeCase()</span><span style="font-size: 12px; color: #8c8b97">Runs when all evidence is done</span></div>
+<span style="text-align: center; color: #6f8cf5">←</span>
+<div class="box"><span class="mono" style="font-size: 10px; color: #7c7b87">SIGNALS</span><span style="font-size: 14px; font-weight: 600">Rule engine + URL checks</span><span style="font-size: 12px; color: #8c8b97">External reputation APIs</span></div>
+<span style="text-align: center; color: #6f8cf5">←</span>
+<div class="box" style="border-color: #3a3548"><span class="mono" style="font-size: 10px; color: #7c7b87">WORKER</span><span style="font-size: 14px; font-weight: 600">AI extraction</span><span style="font-size: 12px; color: #8c8b97">Gemini → Groq fallback</span></div>
+</div>
+<div style="display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 12px; padding-top: 14px; border-top: 1px dashed #26262e">
+<div style="font-size: 13px; color: #9d9ca8"><span class="mono" style="font-size: 11px; color: #7c7b87">DB</span><br>PostgreSQL (Neon) via Drizzle</div>
+<div style="font-size: 13px; color: #9d9ca8"><span class="mono" style="font-size: 11px; color: #7c7b87">FILES</span><br>Cloudinary for screenshots, PDFs, DOCX</div>
+<div style="font-size: 13px; color: #9d9ca8"><span class="mono" style="font-size: 11px; color: #7c7b87">AUTH</span><br>Better Auth, Drizzle adapter</div>
+</div>
+</div>
+<p class="p" style="font-size: 15px; color: #9d9ca8">Caption: requests only validate and enqueue. Extraction, signal checks and synthesis run in workers, so a slow model call never blocks the UI.</p>
+</section>
+
+<section id="features" style="display: flex; flex-direction: column; gap: 22px">
+<span class="lbl">04 · Key Features</span>
+<h2 class="h2">What a user can do</h2>
+<div style="display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 1px; background: #1f1f26; border: 1px solid #1f1f26; border-radius: 16px; overflow: hidden">
+<div style="background: #0d0d10; padding: 22px; display: flex; flex-direction: column; gap: 6px"><span style="font-size: 16px; font-weight: 600">Multimodal evidence upload</span><span style="font-size: 14px; line-height: 1.6; color: #9d9ca8">Screenshots, documents and pasted text in one case.</span></div>
+<div style="background: #0d0d10; padding: 22px; display: flex; flex-direction: column; gap: 6px"><span style="font-size: 16px; font-weight: 600">Evidence timeline</span><span style="font-size: 14px; line-height: 1.6; color: #9d9ca8">Extracted events ordered so the story reads clearly.</span></div>
+<div style="background: #0d0d10; padding: 22px; display: flex; flex-direction: column; gap: 6px"><span style="font-size: 16px; font-weight: 600">Contradiction detection</span><span style="font-size: 14px; line-height: 1.6; color: #9d9ca8">Mismatched amounts, names and domains across items.</span></div>
+<div style="background: #0d0d10; padding: 22px; display: flex; flex-direction: column; gap: 6px"><span style="font-size: 16px; font-weight: 600">Risk level with evidence</span><span style="font-size: 14px; line-height: 1.6; color: #9d9ca8">Every signal links back to the item it came from.</span></div>
+<div style="background: #0d0d10; padding: 22px; display: flex; flex-direction: column; gap: 6px"><span style="font-size: 16px; font-weight: 600">Next verification steps</span><span style="font-size: 14px; line-height: 1.6; color: #9d9ca8">Concrete things to check before paying or replying.</span></div>
+<div style="background: #0d0d10; padding: 22px; display: flex; flex-direction: column; gap: 6px"><span style="font-size: 16px; font-weight: 600">Shareable report &amp; public feed</span><span style="font-size: 14px; line-height: 1.6; color: #9d9ca8">Export a report; share only the pattern publicly.</span></div>
+</div>
+</section>
+
+<section id="challenges" style="display: flex; flex-direction: column; gap: 22px">
+<span class="lbl">05 · Engineering Challenges</span>
+<h2 class="h2">The hard parts</h2>
+<div style="display: flex; flex-direction: column; border-top: 1px solid #1f1f26">
+<div style="display: grid; grid-template-columns: 40px minmax(0, 1fr); gap: 16px; padding: 22px 0; border-bottom: 1px solid #1f1f26"><span class="mono" style="font-size: 12px; color: #7c7b87">A</span><div style="display: flex; flex-direction: column; gap: 6px"><span style="font-size: 17px; font-weight: 600">Reading images and text as one source</span><span style="font-size: 15px; line-height: 1.65; color: #9d9ca8">Messy screenshots had to produce the same structured fields as clean text. [How you solved it — schema, prompting, retries.]</span></div></div>
+<div style="display: grid; grid-template-columns: 40px minmax(0, 1fr); gap: 16px; padding: 22px 0; border-bottom: 1px solid #1f1f26"><span class="mono" style="font-size: 12px; color: #7c7b87">B</span><div style="display: flex; flex-direction: column; gap: 6px"><span style="font-size: 17px; font-weight: 600">Untrusted input going into a model</span><span style="font-size: 15px; line-height: 1.65; color: #9d9ca8">Evidence can contain instructions aimed at the model. [Your prompt-injection defenses.]</span></div></div>
+<div style="display: grid; grid-template-columns: 40px minmax(0, 1fr); gap: 16px; padding: 22px 0; border-bottom: 1px solid #1f1f26"><span class="mono" style="font-size: 12px; color: #7c7b87">C</span><div style="display: flex; flex-direction: column; gap: 6px"><span style="font-size: 17px; font-weight: 600">Knowing when a case is "done"</span><span style="font-size: 15px; line-height: 1.65; color: #9d9ca8">Synthesis must run once, only after every evidence job finishes. [Your coordination approach.]</span></div></div>
+</div>
+</section>
+
+<section id="decisions" style="display: flex; flex-direction: column; gap: 22px">
+<span class="lbl">06 · Technical Decisions</span>
+<h2 class="h2">Choices and why</h2>
+<div style="display: flex; flex-direction: column; gap: 12px">
+<div style="display: grid; grid-template-columns: 220px minmax(0, 1fr); gap: 24px; padding: 20px 22px; border-radius: 14px; background: #111115; border: 1px solid #1f1f26"><span style="font-size: 15px; font-weight: 600">Extraction first</span><span style="font-size: 15px; line-height: 1.6; color: #9d9ca8">Built and proved the riskiest part — multimodal extraction — before the signal engine or RAG layer.</span></div>
+<div style="display: grid; grid-template-columns: 220px minmax(0, 1fr); gap: 24px; padding: 20px 22px; border-radius: 14px; background: #111115; border: 1px solid #1f1f26"><span style="font-size: 15px; font-weight: 600">One synthesis function</span><span style="font-size: 15px; line-height: 1.6; color: #9d9ca8">finalizeCase() grows in place as new inputs arrive (signals, RAG matches) instead of being replaced each phase.</span></div>
+<div style="display: grid; grid-template-columns: 220px minmax(0, 1fr); gap: 24px; padding: 20px 22px; border-radius: 14px; background: #111115; border: 1px solid #1f1f26"><span style="font-size: 15px; font-weight: 600">Pattern-only public feed</span><span style="font-size: 15px; line-height: 1.6; color: #9d9ca8">No names, companies or numbers are ever published, so no manual review step is needed.</span></div>
+<div style="display: grid; grid-template-columns: 220px minmax(0, 1fr); gap: 24px; padding: 20px 22px; border-radius: 14px; background: #111115; border: 1px solid #1f1f26"><span style="font-size: 15px; font-weight: 600">Free-tier model budget</span><span style="font-size: 15px; line-height: 1.6; color: #9d9ca8">Gemini as primary with a Groq fallback keeps it running within free API limits.</span></div>
+</div>
+</section>
+
+<section id="learnings" style="display: flex; flex-direction: column; gap: 22px">
+<span class="lbl">07 · Results &amp; Learnings</span>
+<h2 class="h2">What came out of it</h2>
+<div style="display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 12px">
+<div style="padding: 22px; border-radius: 14px; border: 1.5px dashed #2c2c35; display: flex; flex-direction: column; gap: 6px"><span style="font-size: 28px; font-weight: 600">[——]</span><span style="font-size: 13px; color: #8c8b97">[Real metric, e.g. avg. analysis time]</span></div>
+<div style="padding: 22px; border-radius: 14px; border: 1.5px dashed #2c2c35; display: flex; flex-direction: column; gap: 6px"><span style="font-size: 28px; font-weight: 600">[——]</span><span style="font-size: 13px; color: #8c8b97">[Real metric, e.g. cases tested]</span></div>
+<div style="padding: 22px; border-radius: 14px; border: 1.5px dashed #2c2c35; display: flex; flex-direction: column; gap: 6px"><span style="font-size: 28px; font-weight: 600">[——]</span><span style="font-size: 13px; color: #8c8b97">[Real metric, e.g. fallback rate]</span></div>
+</div>
+<p class="p">[Two or three honest learnings — what you'd change, what surprised you, what you'd build next.]</p>
+</section>
+
+<section id="stack" style="display: flex; flex-direction: column; gap: 18px">
+<span class="lbl">08 · Tech Stack</span>
+<div style="display: flex; flex-wrap: wrap; gap: 6px"><span class="tag">Next.js</span><span class="tag">TypeScript</span><span class="tag">PostgreSQL</span><span class="tag">Drizzle</span><span class="tag">Better Auth</span><span class="tag">Redis</span><span class="tag">BullMQ</span><span class="tag">Gemini</span><span class="tag">Groq</span><span class="tag">Cloudinary</span><span class="tag">Tailwind CSS</span><span class="tag">Vercel</span></div>
+</section>
+
+<!-- next project -->
+<a href="P4-Home.dc.html" style="display: flex; justify-content: space-between; align-items: center; padding: 28px 30px; border-radius: 18px; border: 1px solid #1f1f26; background: #111115">
+<div style="display: flex; flex-direction: column; gap: 6px"><span class="mono" style="font-size: 11px; color: #7c7b87">NEXT CASE STUDY</span><span style="font-size: 24px; font-weight: 600">PrepLab</span></div>
+<span style="font-size: 24px; color: #b3a8ff">→</span>
+</a>
+
+</div>
+</div>
+</div>
+
+<footer style="border-top: 1px solid #1f1f26">
+<div style="max-width: 1160px; margin: 0 auto; padding: 36px 40px 44px; display: flex; justify-content: space-between; align-items: center">
+<div style="display: flex; flex-direction: column; gap: 4px"><span style="font-size: 15px; font-weight: 600">Tajwarul Chowdhury</span><span style="font-size: 13px; color: #8c8b97">Software Engineer</span></div>
+<span class="mono" style="font-size: 12px; color: #7c7b87">© 2026 Tajwarul Chowdhury</span>
+</div>
+</footer>
+
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props='{"$preview":{"width":1440,"height":5400}}'>
+class Component extends DCLogic {
+  renderVals() { return {}; }
+}
+</script>
+</body>
+</html>

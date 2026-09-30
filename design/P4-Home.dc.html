@@ -1,0 +1,400 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Tajwarul Chowdhury — Software Engineer</title>
+<script src="./vendor/react.js"></script>
+<script src="./vendor/react-dom.js"></script>
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Instrument+Sans:wght@400;500;600;700&amp;family=JetBrains+Mono:wght@400;500&amp;display=swap">
+<style>
+body{margin:0;background:#0d0d10}
+.mono{font-family:'JetBrains Mono',ui-monospace,monospace}
+.lbl{font-family:'JetBrains Mono',monospace;font-size:12px;letter-spacing:.08em;text-transform:uppercase;color:#8b7cf6}
+a{color:#ecebf0;text-decoration:none}
+a:hover{color:#b3a8ff}
+.nl{font-size:14px;color:#9d9ca8;padding:10px 0}
+.nl:hover{color:#ecebf0}
+.btn{display:inline-flex;align-items:center;gap:8px;height:44px;padding:0 18px;border-radius:10px;font-size:14px;font-weight:600;border:1px solid #2c2c35;color:#ecebf0;background:transparent;transition:border-color .15s,background .15s}
+.btn:hover{border-color:#4a4a57;background:#16161b;color:#ecebf0}
+.btn-p{background:#8b7cf6;border-color:#8b7cf6;color:#0d0d10}
+.btn-p:hover{background:#9d90f8;border-color:#9d90f8;color:#0d0d10}
+.btn-sm{height:40px;padding:0 14px;font-size:13px}
+.tag{display:inline-flex;align-items:center;height:26px;padding:0 9px;border-radius:6px;background:#1a1a20;border:1px solid #26262e;font-family:'JetBrains Mono',monospace;font-size:12px;color:#b9b8c3}
+.proj{transition:border-color .2s}
+.proj:hover{border-color:#3a3548}
+.proj:hover .shot{transform:translateY(-4px)}
+.shot{transition:transform .3s ease}
+.soc{display:inline-flex;align-items:center;gap:8px;font-size:14px;color:#9d9ca8;height:44px}
+.soc:hover{color:#ecebf0}
+.inp{height:46px;padding:0 14px;border-radius:10px;border:1px solid #26262e;background:#141418;color:#ecebf0;font-family:'Instrument Sans',sans-serif;font-size:15px}
+.inp:focus{outline:2px solid #8b7cf6;outline-offset:1px}
+</style>
+</helmet>
+<div style="width: 100%; min-height: 6000px; background: #0d0d10; color: #ecebf0; font-family: 'Instrument Sans', system-ui, sans-serif; -webkit-font-smoothing: antialiased">
+
+<!-- NAV (scrolled state: border + opaque) -->
+<header style="position: sticky; top: 0; z-index: 20; background: rgba(13,13,16,0.92); border-bottom: 1px solid #1f1f26">
+<div style="max-width: 1160px; margin: 0 auto; padding: 0 40px; height: 64px; display: flex; align-items: center; justify-content: space-between">
+<a href="#top" style="display: flex; align-items: center; gap: 10px; font-weight: 600; font-size: 15px">
+<span class="mono" style="display: inline-flex; align-items: center; justify-content: center; width: 28px; height: 28px; border-radius: 7px; background: #1c1930; color: #b3a8ff; font-size: 12px">TC</span>Tajwarul Chowdhury</a>
+<div style="display: flex; align-items: center; gap: 28px">
+<nav style="display: flex; gap: 24px" aria-label="Sections">
+<a class="nl" href="#about">About</a>
+<a class="nl" href="#projects">Projects</a>
+<a class="nl" href="#engineering">Engineering</a>
+<a class="nl" href="#stack">Stack</a>
+<a class="nl" href="#problem-solving">Problem Solving</a>
+<a class="nl" href="#education">Education</a>
+<a class="nl" href="#contact">Contact</a>
+</nav>
+<a class="btn btn-sm" href="#resume">View Resume</a>
+</div>
+</div>
+</header>
+
+<main id="top" style="max-width: 1160px; margin: 0 auto; padding: 0 40px">
+
+<!-- HERO -->
+<section style="padding: 120px 0 96px; display: grid; grid-template-columns: minmax(0, 1.35fr) minmax(0, 1fr); gap: 80px; align-items: center">
+<div style="display: flex; flex-direction: column; gap: 28px">
+<div class="lbl" style="display: flex; align-items: center; gap: 10px"><span style="width: 6px; height: 6px; border-radius: 50%; background: #8b7cf6"></span>Software Engineer</div>
+<h1 style="margin: 0; font-size: 60px; line-height: 1.06; font-weight: 600; letter-spacing: -0.035em">Hi, I'm Tajwarul.<br><span style="color: #8c8b97">I build full-stack systems and AI-powered software.</span></h1>
+<p style="margin: 0; max-width: 540px; font-size: 18px; line-height: 1.65; color: #b9b8c3">Software engineering graduate from Sylhet Engineering College. I design and build complete applications — the APIs, databases, background jobs and LLM pipelines behind them — and I care about what happens when things fail.</p>
+<div style="display: flex; gap: 12px">
+<a class="btn btn-p" href="#projects">View Projects</a>
+<a class="btn" href="#resume">View Resume</a>
+</div>
+<div style="display: flex; gap: 24px; padding-top: 4px">
+<a class="soc" href="#github"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m8 7-5 5 5 5M16 7l5 5-5 5"></path></svg>GitHub</a>
+<a class="soc" href="#linkedin"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="7" width="18" height="13" rx="2"></rect><path d="M8 7V5a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2"></path></svg>LinkedIn</a>
+<a class="soc" href="#email"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="18" height="14" rx="2"></rect><path d="m3 7 9 6 9-6"></path></svg>Email</a>
+</div>
+</div>
+<!-- photo -->
+<div style="position: relative; justify-self: end; width: 380px; height: 460px">
+<div style="position: absolute; top: 24px; left: 24px; width: 356px; height: 436px; border-radius: 22px; border: 1px solid #1f1f26; background-image: radial-gradient(#2a2a33 1px, transparent 1px); background-size: 16px 16px"></div>
+<div style="position: absolute; top: 0; left: 0; width: 356px; height: 436px; border-radius: 22px; border: 1px solid rgba(139,124,246,0.45); background: #141418; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 10px; color: #7c7b87">
+<svg width="34" height="34" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M4 8h3l2-3h6l2 3h3v11H4z"></path><circle cx="12" cy="13" r="3.5"></circle></svg>
+<span style="font-size: 15px; font-weight: 600; color: #ecebf0">[Professional photo]</span>
+<span class="mono" style="font-size: 11px">4:5 portrait · neutral background</span>
+</div>
+<div class="mono" style="position: absolute; left: 16px; bottom: 40px; display: flex; align-items: center; gap: 8px; height: 30px; padding: 0 12px; border-radius: 8px; background: #0d0d10; border: 1px solid #26262e; font-size: 11px; color: #b9b8c3"><span style="width: 6px; height: 6px; border-radius: 50%; background: #5fd38d"></span>Open to SWE roles · Sylhet, BD</div>
+</div>
+</section>
+
+<!-- quick proof strip -->
+<div style="display: flex; align-items: center; gap: 28px; padding: 18px 0; border-top: 1px solid #1f1f26; border-bottom: 1px solid #1f1f26; font-size: 14px; color: #8c8b97">
+<span class="mono" style="font-size: 12px; letter-spacing: .06em; text-transform: uppercase">Recent builds</span>
+<a href="#projects" style="display: flex; align-items: center; gap: 8px"><span style="color: #ecebf0; font-weight: 600">Scam Scanner</span><span>AI evidence analysis</span></a>
+<span style="color: #3a3a44">/</span>
+<a href="#projects" style="display: flex; align-items: center; gap: 8px"><span style="color: #ecebf0; font-weight: 600">PrepLab</span><span>Recruitment platform</span></a>
+</div>
+
+<!-- ABOUT -->
+<section id="about" style="padding: 128px 0; display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1.8fr); gap: 80px">
+<div style="display: flex; flex-direction: column; gap: 14px">
+<div class="lbl">About</div>
+<h2 style="margin: 0; font-size: 40px; line-height: 1.1; font-weight: 600; letter-spacing: -0.03em">About Me</h2>
+</div>
+<div style="display: flex; flex-direction: column; gap: 36px">
+<p style="margin: 0; font-size: 20px; line-height: 1.65; color: #cfced8">I studied Computer Science &amp; Engineering and spent most of that time building things end to end. I'm drawn to the backend side — how data is modelled, how requests are validated, what runs in the background — and to AI features that have to hold up in production, not just in a demo. Competitive programming taught me to reason about problems before writing code; building projects taught me to ship them.</p>
+<div style="display: flex; flex-direction: column; gap: 14px; padding-top: 28px; border-top: 1px solid #1f1f26">
+<span class="mono" style="font-size: 12px; letter-spacing: .06em; text-transform: uppercase; color: #7c7b87">Currently focused on</span>
+<div style="display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 12px">
+<div style="display: flex; flex-direction: column; gap: 6px"><span style="font-size: 16px; font-weight: 600">Backend Systems</span><span style="font-size: 13px; color: #8c8b97">API design, auth, validation</span></div>
+<div style="display: flex; flex-direction: column; gap: 6px"><span style="font-size: 16px; font-weight: 600">AI Applications</span><span style="font-size: 13px; color: #8c8b97">Structured output, fallbacks</span></div>
+<div style="display: flex; flex-direction: column; gap: 6px"><span style="font-size: 16px; font-weight: 600">Databases</span><span style="font-size: 13px; color: #8c8b97">Schema design, indexing</span></div>
+<div style="display: flex; flex-direction: column; gap: 6px"><span style="font-size: 16px; font-weight: 600">Async Processing</span><span style="font-size: 13px; color: #8c8b97">Queues, workers, retries</span></div>
+</div>
+</div>
+</div>
+</section>
+
+<!-- FEATURED PROJECTS -->
+<section id="projects" style="padding: 0 0 128px; display: flex; flex-direction: column; gap: 48px">
+<div style="display: flex; justify-content: space-between; align-items: flex-end">
+<div style="display: flex; flex-direction: column; gap: 14px">
+<div class="lbl">Projects</div>
+<h2 style="margin: 0; font-size: 48px; line-height: 1.08; font-weight: 600; letter-spacing: -0.03em">Featured Projects</h2>
+<p style="margin: 0; font-size: 18px; color: #9d9ca8">Selected projects I've designed and built.</p>
+</div>
+<a href="#github" class="nl" style="font-size: 14px">All repositories on GitHub ↗</a>
+</div>
+
+<!-- Scam Scanner -->
+<article class="proj" style="display: grid; grid-template-columns: minmax(0, 1.12fr) minmax(0, 1fr); border: 1px solid #1f1f26; border-radius: 22px; background: #111115; overflow: hidden">
+<div style="background: #16161b; padding: 40px 0 0 40px; display: flex; align-items: flex-end; border-right: 1px solid #1f1f26; overflow: hidden">
+<div class="shot" style="width: 100%; height: 440px; border-radius: 12px 0 0 0; background: #0f0f13; border: 1px solid #2a2a33; border-right: 0; border-bottom: 0; display: flex; flex-direction: column">
+<div style="display: flex; align-items: center; justify-content: space-between; padding: 12px 16px; border-bottom: 1px solid #22222a"><span class="mono" style="font-size: 11px; color: #7c7b87">scam-scanner / cases / 0412</span><span class="mono" style="font-size: 11px; padding: 3px 8px; border-radius: 5px; background: rgba(240,120,110,0.14); color: #f39a8b">HIGH RISK</span></div>
+<div style="display: grid; grid-template-columns: 180px minmax(0, 1fr); flex-grow: 1">
+<div style="border-right: 1px solid #22222a; padding: 14px; display: flex; flex-direction: column; gap: 8px">
+<span class="mono" style="font-size: 10px; color: #7c7b87">EVIDENCE · 3</span>
+<div style="padding: 10px; border-radius: 8px; background: #1a1a20; font-size: 12px; display: flex; flex-direction: column; gap: 4px"><span>offer-letter.png</span><span class="mono" style="font-size: 10px; color: #5fd38d">extracted</span></div>
+<div style="padding: 10px; border-radius: 8px; background: #1a1a20; font-size: 12px; display: flex; flex-direction: column; gap: 4px"><span>whatsapp-chat.txt</span><span class="mono" style="font-size: 10px; color: #5fd38d">extracted</span></div>
+<div style="padding: 10px; border-radius: 8px; background: #1a1a20; font-size: 12px; display: flex; flex-direction: column; gap: 4px"><span>payment-link</span><span class="mono" style="font-size: 10px; color: #b3a8ff">checking domain…</span></div>
+</div>
+<div style="padding: 16px; display: flex; flex-direction: column; gap: 12px">
+<span style="font-size: 14px; font-weight: 600">Investigation summary</span>
+<span style="font-size: 12px; line-height: 1.6; color: #9d9ca8">A job offer asks for an upfront registration fee. The domain in the payment link doesn't match the company, and the salary differs between the letter and the chat.</span>
+<span class="mono" style="font-size: 10px; color: #7c7b87; padding-top: 6px">SIGNALS</span>
+<div style="display: flex; flex-direction: column; gap: 6px; font-size: 12px">
+<div style="display: flex; gap: 8px"><span style="color: #f39a8b">●</span>Upfront fee before interview</div>
+<div style="display: flex; gap: 8px"><span style="color: #f39a8b">●</span>Domain / company mismatch</div>
+<div style="display: flex; gap: 8px"><span style="color: #e8c26a">●</span>Contradicting salary figures</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div style="padding: 40px; display: flex; flex-direction: column; gap: 22px">
+<div class="mono" style="display: flex; gap: 14px; font-size: 12px; color: #7c7b87"><span>01</span><span>AI · Security · Backend</span></div>
+<div style="display: flex; flex-direction: column; gap: 10px">
+<h3 style="margin: 0; font-size: 32px; font-weight: 600; letter-spacing: -0.02em">Scam Scanner</h3>
+<p style="margin: 0; font-size: 17px; line-height: 1.55; color: #b9b8c3">An evidence-analysis platform that reads screenshots, chats and documents together to surface scam indicators.</p>
+</div>
+<div style="display: flex; flex-direction: column; gap: 14px; padding: 18px 0; border-top: 1px solid #1f1f26; border-bottom: 1px solid #1f1f26">
+<div style="display: grid; grid-template-columns: 150px minmax(0, 1fr); gap: 12px; font-size: 14px"><span style="font-weight: 600">AI pipeline</span><span style="color: #9d9ca8">Multimodal extraction with a fallback model, then contradiction detection</span></div>
+<div style="display: grid; grid-template-columns: 150px minmax(0, 1fr); gap: 12px; font-size: 14px"><span style="font-weight: 600">Background jobs</span><span style="color: #9d9ca8">Evidence is processed in queued workers, not in the request</span></div>
+<div style="display: grid; grid-template-columns: 150px minmax(0, 1fr); gap: 12px; font-size: 14px"><span style="font-weight: 600">Security</span><span style="color: #9d9ca8">Rate limiting, file validation, prompt-injection defense</span></div>
+<div style="display: grid; grid-template-columns: 150px minmax(0, 1fr); gap: 12px; font-size: 14px"><span style="font-weight: 600">External checks</span><span style="color: #9d9ca8">URL and domain reputation lookups via third-party APIs</span></div>
+</div>
+<div style="display: flex; flex-wrap: wrap; gap: 6px"><span class="tag">Next.js</span><span class="tag">TypeScript</span><span class="tag">PostgreSQL</span><span class="tag">Drizzle</span><span class="tag">Gemini</span><span class="tag">Redis</span><span class="tag">BullMQ</span></div>
+<div style="display: flex; gap: 10px; margin-top: auto">
+<a class="btn btn-sm" href="#demo">Live Demo ↗</a>
+<a class="btn btn-sm" href="#github">GitHub</a>
+<a class="btn btn-sm btn-p" href="P4-CaseStudy.dc.html">Case Study →</a>
+</div>
+</div>
+</article>
+
+<!-- PrepLab -->
+<article class="proj" style="display: grid; grid-template-columns: minmax(0, 1.12fr) minmax(0, 1fr); border: 1px solid #1f1f26; border-radius: 22px; background: #111115; overflow: hidden">
+<div style="background: #16161b; padding: 40px 0 0 40px; display: flex; align-items: flex-end; border-right: 1px solid #1f1f26; overflow: hidden">
+<div class="shot" style="width: 100%; height: 440px; border-radius: 12px 0 0 0; background: #0f0f13; border: 1px solid #2a2a33; border-right: 0; border-bottom: 0; display: flex; flex-direction: column">
+<div style="display: flex; align-items: center; justify-content: space-between; padding: 12px 16px; border-bottom: 1px solid #22222a"><span class="mono" style="font-size: 11px; color: #7c7b87">preplab / recruiter / jobs / frontend-intern</span><span class="mono" style="font-size: 11px; color: #9d9ca8">24 applicants</span></div>
+<div style="padding: 16px; display: flex; flex-direction: column; gap: 10px">
+<div class="mono" style="display: grid; grid-template-columns: minmax(0, 1.4fr) 90px 110px 80px; gap: 10px; font-size: 10px; color: #7c7b87; padding: 0 10px"><span>CANDIDATE</span><span>MATCH</span><span>STATUS</span><span></span></div>
+<div style="display: grid; grid-template-columns: minmax(0, 1.4fr) 90px 110px 80px; gap: 10px; align-items: center; padding: 10px; border-radius: 8px; background: #1a1a20; font-size: 12px"><span>Candidate A</span><span class="mono" style="color: #5fd38d">strong</span><span style="color: #9d9ca8">Report ready</span><span style="color: #b3a8ff">Open →</span></div>
+<div style="display: grid; grid-template-columns: minmax(0, 1.4fr) 90px 110px 80px; gap: 10px; align-items: center; padding: 10px; border-radius: 8px; background: #1a1a20; font-size: 12px"><span>Candidate B</span><span class="mono" style="color: #e8c26a">partial</span><span style="color: #9d9ca8">Report ready</span><span style="color: #b3a8ff">Open →</span></div>
+<div style="display: grid; grid-template-columns: minmax(0, 1.4fr) 90px 110px 80px; gap: 10px; align-items: center; padding: 10px; border-radius: 8px; background: #1a1a20; font-size: 12px"><span>Candidate C</span><span class="mono" style="color: #7c7b87">—</span><span style="color: #b3a8ff">Processing resume…</span><span style="color: #7c7b87">—</span></div>
+<div style="margin-top: 8px; padding: 14px; border-radius: 10px; border: 1px solid #2a2a33; display: flex; flex-direction: column; gap: 8px">
+<span style="font-size: 13px; font-weight: 600">AI candidate report · Candidate A</span>
+<span style="font-size: 12px; line-height: 1.6; color: #9d9ca8">Strong match on React and REST API work. Resume lists no testing experience; worth asking about in the interview.</span>
+<div style="display: flex; gap: 6px"><span class="tag" style="height: 22px; font-size: 10px">Shortlist</span><span class="tag" style="height: 22px; font-size: 10px">Email candidate</span></div>
+</div>
+</div>
+</div>
+</div>
+<div style="padding: 40px; display: flex; flex-direction: column; gap: 22px">
+<div class="mono" style="display: flex; gap: 14px; font-size: 12px; color: #7c7b87"><span>02</span><span>Full-stack · AI · Workflows</span></div>
+<div style="display: flex; flex-direction: column; gap: 10px">
+<h3 style="margin: 0; font-size: 32px; font-weight: 600; letter-spacing: -0.02em">PrepLab</h3>
+<p style="margin: 0; font-size: 17px; line-height: 1.55; color: #b9b8c3">A recruitment and interview-prep platform connecting candidates and recruiters, with AI-generated resume and candidate reports.</p>
+</div>
+<div style="display: flex; flex-direction: column; gap: 14px; padding: 18px 0; border-top: 1px solid #1f1f26; border-bottom: 1px solid #1f1f26">
+<div style="display: grid; grid-template-columns: 150px minmax(0, 1fr); gap: 12px; font-size: 14px"><span style="font-weight: 600">Two-sided roles</span><span style="color: #9d9ca8">Candidate and recruiter workflows behind role-based access</span></div>
+<div style="display: grid; grid-template-columns: 150px minmax(0, 1fr); gap: 12px; font-size: 14px"><span style="font-weight: 600">AI reports</span><span style="color: #9d9ca8">Resumes analyzed against a job; recruiters get a generated report</span></div>
+<div style="display: grid; grid-template-columns: 150px minmax(0, 1fr); gap: 12px; font-size: 14px"><span style="font-weight: 600">Async work</span><span style="color: #9d9ca8">Resume processing and email notifications run in the background</span></div>
+<div style="display: grid; grid-template-columns: 150px minmax(0, 1fr); gap: 12px; font-size: 14px"><span style="font-weight: 600">Job pipeline</span><span style="color: #9d9ca8">Postings, applications and statuses as database-driven workflows</span></div>
+</div>
+<div style="display: flex; flex-wrap: wrap; gap: 6px"><span class="tag">React</span><span class="tag">Node.js</span><span class="tag">Express</span><span class="tag">MongoDB</span><span class="tag">Gemini</span></div>
+<div style="display: flex; gap: 10px; margin-top: auto">
+<a class="btn btn-sm" href="#demo">Live Demo ↗</a>
+<a class="btn btn-sm" href="#github">GitHub</a>
+<a class="btn btn-sm btn-p" href="#case-study">Case Study →</a>
+</div>
+</div>
+</article>
+
+<!-- future slot -->
+<div style="display: flex; align-items: center; justify-content: space-between; gap: 24px; padding: 28px 40px; border: 1.5px dashed #2c2c35; border-radius: 22px">
+<div style="display: flex; align-items: center; gap: 22px">
+<span class="mono" style="font-size: 12px; color: #7c7b87">03</span>
+<div style="display: flex; flex-direction: column; gap: 4px"><span style="font-size: 20px; font-weight: 600">[Next project]</span><span style="font-size: 14px; color: #8c8b97">Reserved for the next system — same card layout as above once it ships.</span></div>
+</div>
+<span class="mono" style="font-size: 12px; color: #7c7b87">In planning</span>
+</div>
+</section>
+
+<!-- ENGINEERING FOCUS -->
+<section id="engineering" style="padding: 128px 0; border-top: 1px solid #1f1f26; display: flex; flex-direction: column; gap: 44px">
+<div style="display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); gap: 80px; align-items: end">
+<div style="display: flex; flex-direction: column; gap: 14px">
+<div class="lbl">Engineering</div>
+<h2 style="margin: 0; font-size: 40px; line-height: 1.1; font-weight: 600; letter-spacing: -0.03em">Engineering Focus</h2>
+</div>
+<p style="margin: 0; font-size: 16px; line-height: 1.6; color: #9d9ca8">The areas I work in, and where each one shows up in my projects.</p>
+</div>
+<div style="display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 1px; background: #1f1f26; border: 1px solid #1f1f26; border-radius: 18px; overflow: hidden">
+<div style="background: #0d0d10; padding: 30px; display: flex; flex-direction: column; gap: 16px">
+<div style="display: flex; justify-content: space-between"><span style="font-size: 19px; font-weight: 600">Backend</span><span class="mono" style="font-size: 12px; color: #6f8cf5">01</span></div>
+<div style="font-size: 14px; line-height: 1.9; color: #b9b8c3">REST APIs · API design<br>Authentication · Authorization<br>Validation · Error handling</div>
+<div class="mono" style="font-size: 11px; color: #7c7b87; margin-top: auto">Used in → Scam Scanner, PrepLab</div>
+</div>
+<div style="background: #0d0d10; padding: 30px; display: flex; flex-direction: column; gap: 16px">
+<div style="display: flex; justify-content: space-between"><span style="font-size: 19px; font-weight: 600">Databases</span><span class="mono" style="font-size: 12px; color: #6f8cf5">02</span></div>
+<div style="font-size: 14px; line-height: 1.9; color: #b9b8c3">PostgreSQL · MongoDB<br>Schema design · Indexing<br>ORM / ODM (Drizzle, Mongoose)</div>
+<div class="mono" style="font-size: 11px; color: #7c7b87; margin-top: auto">Used in → Scam Scanner, SEC Library</div>
+</div>
+<div style="background: #0d0d10; padding: 30px; display: flex; flex-direction: column; gap: 16px">
+<div style="display: flex; justify-content: space-between"><span style="font-size: 19px; font-weight: 600">Async &amp; Infrastructure</span><span class="mono" style="font-size: 12px; color: #6f8cf5">03</span></div>
+<div style="font-size: 14px; line-height: 1.9; color: #b9b8c3">Redis · Queues · Background jobs<br>Caching · Cron jobs</div>
+<div class="mono" style="font-size: 11px; color: #7c7b87; margin-top: auto">Used in → Scam Scanner, PrepLab</div>
+</div>
+<div style="background: #0d0d10; padding: 30px; display: flex; flex-direction: column; gap: 16px">
+<div style="display: flex; justify-content: space-between"><span style="font-size: 19px; font-weight: 600">AI Systems</span><span class="mono" style="font-size: 12px; color: #6f8cf5">04</span></div>
+<div style="font-size: 14px; line-height: 1.9; color: #b9b8c3">LLM APIs · Structured outputs<br>AI pipelines · RAG<br>Prompt engineering</div>
+<div class="mono" style="font-size: 11px; color: #7c7b87; margin-top: auto">Used in → Scam Scanner, PrepLab, SEC Library</div>
+</div>
+<div style="background: #0d0d10; padding: 30px; display: flex; flex-direction: column; gap: 16px">
+<div style="display: flex; justify-content: space-between"><span style="font-size: 19px; font-weight: 600">Security</span><span class="mono" style="font-size: 12px; color: #6f8cf5">05</span></div>
+<div style="font-size: 14px; line-height: 1.9; color: #b9b8c3">Authentication · Rate limiting<br>Input validation · File security<br>Prompt-injection defense</div>
+<div class="mono" style="font-size: 11px; color: #7c7b87; margin-top: auto">Used in → Scam Scanner</div>
+</div>
+<div style="background: #0d0d10; padding: 30px; display: flex; flex-direction: column; gap: 16px">
+<div style="display: flex; justify-content: space-between"><span style="font-size: 19px; font-weight: 600">Deployment</span><span class="mono" style="font-size: 12px; color: #6f8cf5">06</span></div>
+<div style="font-size: 14px; line-height: 1.9; color: #b9b8c3">Docker · CI/CD<br>Vercel · Render<br>Cloud services</div>
+<div class="mono" style="font-size: 11px; color: #7c7b87; margin-top: auto">Used in → Scam Scanner, SEC Library</div>
+</div>
+</div>
+</section>
+
+<!-- TECH STACK -->
+<section id="stack" style="padding: 0 0 128px; display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 2.2fr); gap: 80px">
+<div style="display: flex; flex-direction: column; gap: 14px">
+<div class="lbl">Stack</div>
+<h2 style="margin: 0; font-size: 40px; line-height: 1.1; font-weight: 600; letter-spacing: -0.03em">Tech Stack</h2>
+<p style="margin: 0; font-size: 15px; line-height: 1.6; color: #9d9ca8">What I reach for, grouped by layer.</p>
+</div>
+<div style="display: flex; flex-direction: column">
+<div style="display: grid; grid-template-columns: 160px minmax(0, 1fr); gap: 20px; padding: 18px 0; border-top: 1px solid #1f1f26; align-items: baseline"><span class="mono" style="font-size: 12px; letter-spacing: .06em; text-transform: uppercase; color: #7c7b87">Frontend</span><span style="font-size: 16px; line-height: 1.7; word-spacing: 2px">React <span style="color: #3a3a44">·</span> Next.js <span style="color: #3a3a44">·</span> TypeScript <span style="color: #3a3a44">·</span> JavaScript <span style="color: #3a3a44">·</span> Tailwind CSS</span></div>
+<div style="display: grid; grid-template-columns: 160px minmax(0, 1fr); gap: 20px; padding: 18px 0; border-top: 1px solid #1f1f26; align-items: baseline"><span class="mono" style="font-size: 12px; letter-spacing: .06em; text-transform: uppercase; color: #7c7b87">Backend</span><span style="font-size: 16px; line-height: 1.7">Node.js <span style="color: #3a3a44">·</span> Express <span style="color: #3a3a44">·</span> REST APIs</span></div>
+<div style="display: grid; grid-template-columns: 160px minmax(0, 1fr); gap: 20px; padding: 18px 0; border-top: 1px solid #1f1f26; align-items: baseline"><span class="mono" style="font-size: 12px; letter-spacing: .06em; text-transform: uppercase; color: #7c7b87">Databases</span><span style="font-size: 16px; line-height: 1.7">PostgreSQL <span style="color: #3a3a44">·</span> MongoDB <span style="color: #3a3a44">·</span> Drizzle <span style="color: #3a3a44">·</span> Mongoose</span></div>
+<div style="display: grid; grid-template-columns: 160px minmax(0, 1fr); gap: 20px; padding: 18px 0; border-top: 1px solid #1f1f26; align-items: baseline"><span class="mono" style="font-size: 12px; letter-spacing: .06em; text-transform: uppercase; color: #7c7b87">AI</span><span style="font-size: 16px; line-height: 1.7">Gemini <span style="color: #3a3a44">·</span> Groq <span style="color: #3a3a44">·</span> LLM APIs <span style="color: #3a3a44">·</span> RAG</span></div>
+<div style="display: grid; grid-template-columns: 160px minmax(0, 1fr); gap: 20px; padding: 18px 0; border-top: 1px solid #1f1f26; align-items: baseline"><span class="mono" style="font-size: 12px; letter-spacing: .06em; text-transform: uppercase; color: #7c7b87">Tools</span><span style="font-size: 16px; line-height: 1.7">Git <span style="color: #3a3a44">·</span> GitHub <span style="color: #3a3a44">·</span> Docker <span style="color: #3a3a44">·</span> Vercel <span style="color: #3a3a44">·</span> Render <span style="color: #3a3a44">·</span> Cloudinary</span></div>
+<div style="display: grid; grid-template-columns: 160px minmax(0, 1fr); gap: 20px; padding: 18px 0; border-top: 1px solid #1f1f26; border-bottom: 1px solid #1f1f26; align-items: baseline"><span class="mono" style="font-size: 12px; letter-spacing: .06em; text-transform: uppercase; color: #7c7b87">Core CS</span><span style="font-size: 16px; line-height: 1.7">Data Structures &amp; Algorithms <span style="color: #3a3a44">·</span> OOP <span style="color: #3a3a44">·</span> DBMS <span style="color: #3a3a44">·</span> Operating Systems <span style="color: #3a3a44">·</span> Computer Networks <span style="color: #3a3a44">·</span> Software Engineering</span></div>
+</div>
+</section>
+
+</main>
+
+<!-- PROBLEM SOLVING (distinct band) -->
+<section id="problem-solving" style="background: #121216; border-top: 1px solid #1f1f26; border-bottom: 1px solid #1f1f26">
+<div style="max-width: 1160px; margin: 0 auto; padding: 112px 40px; display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1.6fr); gap: 80px">
+<div style="display: flex; flex-direction: column; gap: 20px">
+<div class="lbl">Problem Solving</div>
+<h2 style="margin: 0; font-size: 40px; line-height: 1.1; font-weight: 600; letter-spacing: -0.03em">Problem Solving</h2>
+<p style="margin: 0; font-size: 16px; line-height: 1.65; color: #9d9ca8">Alongside building applications, I practice algorithmic problem solving on competitive programming judges.</p>
+<div style="display: flex; gap: 10px; flex-wrap: wrap; padding-top: 6px">
+<a class="btn btn-sm" href="#codeforces">Codeforces ↗</a>
+<a class="btn btn-sm" href="#leetcode">LeetCode ↗</a>
+<a class="btn btn-sm" href="#github">GitHub ↗</a>
+</div>
+</div>
+<div style="display: flex; flex-direction: column; gap: 28px">
+<div style="display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 1px; background: #26262e; border: 1px solid #26262e; border-radius: 16px; overflow: hidden">
+<div style="background: #0d0d10; padding: 26px; display: flex; flex-direction: column; gap: 14px">
+<span class="mono" style="font-size: 12px; color: #7c7b87">CODEFORCES</span>
+<div style="display: flex; flex-direction: column; gap: 2px"><span style="font-size: 34px; font-weight: 600; letter-spacing: -0.02em">[——]</span><span style="font-size: 13px; color: #8c8b97">Rating</span></div>
+<div style="display: flex; flex-direction: column; gap: 2px"><span style="font-size: 20px; font-weight: 600">[——]</span><span style="font-size: 13px; color: #8c8b97">Problems solved</span></div>
+</div>
+<div style="background: #0d0d10; padding: 26px; display: flex; flex-direction: column; gap: 14px">
+<span class="mono" style="font-size: 12px; color: #7c7b87">LEETCODE</span>
+<div style="display: flex; flex-direction: column; gap: 2px"><span style="font-size: 34px; font-weight: 600; letter-spacing: -0.02em">[——]</span><span style="font-size: 13px; color: #8c8b97">Problems solved</span></div>
+<div style="display: flex; flex-direction: column; gap: 2px"><span style="font-size: 20px; font-weight: 600">[E / M / H]</span><span style="font-size: 13px; color: #8c8b97">Split by difficulty</span></div>
+</div>
+<div style="background: #0d0d10; padding: 26px; display: flex; flex-direction: column; gap: 14px">
+<span class="mono" style="font-size: 12px; color: #7c7b87">GITHUB</span>
+<div style="display: flex; flex-direction: column; gap: 2px"><span style="font-size: 34px; font-weight: 600; letter-spacing: -0.02em">[——]</span><span style="font-size: 13px; color: #8c8b97">Public repositories</span></div>
+<div style="display: flex; flex-direction: column; gap: 2px"><span style="font-size: 20px; font-weight: 600">[——]</span><span style="font-size: 13px; color: #8c8b97">Contributions this year</span></div>
+</div>
+</div>
+<div style="display: flex; flex-direction: column; gap: 12px">
+<span class="mono" style="font-size: 12px; letter-spacing: .06em; text-transform: uppercase; color: #7c7b87">Areas I practice</span>
+<div style="display: flex; flex-wrap: wrap; gap: 8px"><span class="tag">Arrays</span><span class="tag">Strings</span><span class="tag">Binary Search</span><span class="tag">Trees</span><span class="tag">Graphs</span><span class="tag">Dynamic Programming</span><span class="tag">Greedy</span><span class="tag">Data Structures</span></div>
+</div>
+</div>
+</div>
+</section>
+
+<div style="max-width: 1160px; margin: 0 auto; padding: 0 40px">
+
+<!-- EDUCATION (compact) -->
+<section id="education" style="padding: 112px 0; display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 2.2fr); gap: 80px; border-bottom: 1px solid #1f1f26">
+<div style="display: flex; flex-direction: column; gap: 14px">
+<div class="lbl">Education</div>
+<h2 style="margin: 0; font-size: 32px; line-height: 1.1; font-weight: 600; letter-spacing: -0.03em">Education</h2>
+</div>
+<div style="display: flex; flex-direction: column; gap: 20px">
+<div style="display: flex; justify-content: space-between; align-items: baseline; gap: 20px">
+<div style="display: flex; flex-direction: column; gap: 6px"><span style="font-size: 20px; font-weight: 600">BSc (Engg) in Computer Science &amp; Engineering</span><span style="font-size: 16px; color: #9d9ca8">Sylhet Engineering College</span></div>
+<span class="mono" style="font-size: 13px; color: #7c7b87">Class of [20XX]</span>
+</div>
+<div style="display: flex; align-items: baseline; gap: 16px; flex-wrap: wrap; font-size: 14px; color: #9d9ca8"><span class="mono" style="font-size: 12px; color: #7c7b87">COURSEWORK</span>Data Structures &amp; Algorithms · Database Management Systems · Operating Systems · Computer Networks · Software Engineering</div>
+</div>
+</section>
+
+<!-- CONTACT -->
+<section id="contact" style="padding: 128px 0; display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); gap: 80px">
+<div style="display: flex; flex-direction: column; gap: 22px">
+<div class="lbl">Contact</div>
+<h2 style="margin: 0; font-size: 52px; line-height: 1.05; font-weight: 600; letter-spacing: -0.035em">Let's Connect</h2>
+<p style="margin: 0; max-width: 440px; font-size: 18px; line-height: 1.6; color: #b9b8c3">I'm currently open to Software Engineering opportunities and interesting technical projects.</p>
+<a class="btn btn-p" href="#email" style="align-self: flex-start">Get in Touch</a>
+<div style="display: flex; flex-direction: column; margin-top: 12px; border-top: 1px solid #1f1f26">
+<a href="#email" style="display: flex; justify-content: space-between; padding: 16px 0; border-bottom: 1px solid #1f1f26; font-size: 15px"><span style="color: #9d9ca8">Email</span><span>[your email]</span></a>
+<a href="#linkedin" style="display: flex; justify-content: space-between; padding: 16px 0; border-bottom: 1px solid #1f1f26; font-size: 15px"><span style="color: #9d9ca8">LinkedIn</span><span>[linkedin.com/in/…] ↗</span></a>
+<a href="#github" style="display: flex; justify-content: space-between; padding: 16px 0; border-bottom: 1px solid #1f1f26; font-size: 15px"><span style="color: #9d9ca8">GitHub</span><span>[github.com/…] ↗</span></a>
+</div>
+</div>
+<sc-if value="{{notSent}}" hint-placeholder-val="{{ true }}">
+<form onSubmit="{{submit}}" style="display: flex; flex-direction: column; gap: 16px; padding: 32px; border: 1px solid #1f1f26; border-radius: 18px; background: #111115; align-self: start">
+<label style="display: flex; flex-direction: column; gap: 8px; font-size: 13px; color: #9d9ca8">Name<input class="inp" type="text" placeholder="Your name"></label>
+<label style="display: flex; flex-direction: column; gap: 8px; font-size: 13px; color: #9d9ca8">Email<input class="inp" type="email" placeholder="you@company.com"></label>
+<label style="display: flex; flex-direction: column; gap: 8px; font-size: 13px; color: #9d9ca8">Message<textarea class="inp" placeholder="What would you like to talk about?" style="height: 130px; padding: 12px 14px; resize: vertical"></textarea></label>
+<button class="btn btn-p" type="submit" style="justify-content: center; cursor: pointer; font-family: inherit">Send Message</button>
+</form>
+</sc-if>
+<sc-if value="{{sent}}" hint-placeholder-val="{{ false }}">
+<div style="padding: 32px; border: 1px solid #1f1f26; border-radius: 18px; background: #111115; display: flex; flex-direction: column; gap: 10px; align-self: start">
+<span style="font-size: 20px; font-weight: 600">Message sent.</span>
+<span style="font-size: 15px; color: #9d9ca8">Success state for the form — this mockup doesn't send anything.</span>
+<button type="button" class="btn btn-sm" onClick="{{reset}}" style="align-self: flex-start; cursor: pointer; font-family: inherit; margin-top: 6px">Back to form</button>
+</div>
+</sc-if>
+</section>
+
+</div>
+
+<!-- FOOTER -->
+<footer style="border-top: 1px solid #1f1f26">
+<div style="max-width: 1160px; margin: 0 auto; padding: 36px 40px 44px; display: flex; justify-content: space-between; align-items: center">
+<div style="display: flex; flex-direction: column; gap: 4px"><span style="font-size: 15px; font-weight: 600">Tajwarul Chowdhury</span><span style="font-size: 13px; color: #8c8b97">Software Engineer</span></div>
+<div style="display: flex; gap: 24px"><a class="nl" href="#github">GitHub</a><a class="nl" href="#linkedin">LinkedIn</a><a class="nl" href="#email">Email</a></div>
+<span class="mono" style="font-size: 12px; color: #7c7b87">© 2026 Tajwarul Chowdhury</span>
+</div>
+</footer>
+
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props='{"$preview":{"width":1440,"height":6000}}'>
+class Component extends DCLogic {
+  state = { sent: false };
+  renderVals() {
+    return {
+      sent: this.state.sent,
+      notSent: !this.state.sent,
+      submit: (e) => { if (e && e.preventDefault) e.preventDefault(); this.setState({ sent: true }); },
+      reset: () => this.setState({ sent: false })
+    };
+  }
+}
+</script>
+</body>
+</html>

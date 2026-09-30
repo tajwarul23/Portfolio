@@ -1,26 +1,138 @@
 @import "tailwindcss";
+@import "tw-animate-css";
+@import "shadcn/tailwind.css";
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
-}
+@custom-variant dark (&:is(.dark *));
 
+/* Design palette (from design/P4-Home.dc.html). The site is dark-only. */
 @theme inline {
+  --font-sans: var(--font-instrument), system-ui, sans-serif;
+  --font-mono: var(--font-jetbrains), ui-monospace, monospace;
+  --font-heading: var(--font-sans);
+
+  --color-ink: #0d0d10;
+  --color-surface: #111115;
+  --color-surface-2: #141418;
+  --color-surface-3: #16161b;
+  --color-band: #121216;
+  --color-chip: #1a1a20;
+  --color-line: #1f1f26;
+  --color-line-2: #26262e;
+  --color-line-3: #2c2c35;
+  --color-line-strong: #3a3548;
+
+  --color-fg: #ecebf0;
+  --color-fg-2: #cfced8;
+  --color-fg-3: #b9b8c3;
+  --color-muted-1: #9d9ca8;
+  --color-muted-2: #8c8b97;
+  --color-dim: #7c7b87;
+  --color-sep: #3a3a44;
+
+  --color-violet: #8b7cf6;
+  --color-violet-hover: #9d90f8;
+  --color-violet-soft: #b3a8ff;
+  --color-violet-bg: #1c1930;
+  --color-blue: #6f8cf5;
+  --color-ok: #5fd38d;
+  --color-risk: #f39a8b;
+  --color-warn: #e8c26a;
+
+  /* shadcn tokens */
   --color-background: var(--background);
   --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+  --color-ring: var(--ring);
+  --color-input: var(--input);
+  --color-border: var(--border);
+  --color-destructive: var(--destructive);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-accent: var(--accent);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-muted: var(--muted);
+  --color-secondary-foreground: var(--secondary-foreground);
+  --color-secondary: var(--secondary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-primary: var(--primary);
+  --color-popover-foreground: var(--popover-foreground);
+  --color-popover: var(--popover);
+  --color-card-foreground: var(--card-foreground);
+  --color-card: var(--card);
+  --radius-sm: calc(var(--radius) * 0.6);
+  --radius-md: calc(var(--radius) * 0.8);
+  --radius-lg: var(--radius);
+  --radius-xl: calc(var(--radius) * 1.4);
+  --radius-2xl: calc(var(--radius) * 1.8);
+  --radius-3xl: calc(var(--radius) * 2.2);
+  --radius-4xl: calc(var(--radius) * 2.6);
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+:root {
+  --background: #0d0d10;
+  --foreground: #ecebf0;
+  --card: #111115;
+  --card-foreground: #ecebf0;
+  --popover: #111115;
+  --popover-foreground: #ecebf0;
+  --primary: #8b7cf6;
+  --primary-foreground: #0d0d10;
+  --secondary: #1a1a20;
+  --secondary-foreground: #ecebf0;
+  --muted: #16161b;
+  --muted-foreground: #9d9ca8;
+  --accent: #16161b;
+  --accent-foreground: #ecebf0;
+  --destructive: #f39a8b;
+  --border: #1f1f26;
+  --input: #26262e;
+  --ring: #8b7cf6;
+  --radius: 0.625rem;
+  color-scheme: dark;
+}
+
+@layer base {
+  * {
+    @apply border-border outline-ring/50;
+  }
+  html {
+    @apply font-sans;
+    scroll-behavior: smooth;
+    scroll-padding-top: 88px;
+  }
+  body {
+    @apply bg-background text-foreground antialiased;
+  }
+  a {
+    @apply transition-colors;
+  }
+  :focus-visible {
+    outline: 2px solid var(--color-violet);
+    outline-offset: 2px;
+  }
+  ::selection {
+    background: rgb(139 124 246 / 0.35);
   }
 }
 
-body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+  *,
+  *::before,
+  *::after {
+    transition-duration: 0.01ms !important;
+    animation-duration: 0.01ms !important;
+  }
+}
+
+@layer components {
+  .eyebrow {
+    @apply font-mono text-xs tracking-[0.08em] text-violet uppercase;
+  }
+  .mono-label {
+    @apply font-mono text-xs tracking-[0.06em] text-dim uppercase;
+  }
+  .tag {
+    @apply inline-flex h-[26px] items-center rounded-md border border-line-2 bg-chip px-[9px] font-mono text-xs text-fg-3;
+  }
 }
